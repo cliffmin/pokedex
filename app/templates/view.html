@@ -1,6 +1,6 @@
 {% extends "layout.html"%}
 {% block content%}
-<title>Pokedex: Viewer</title>
+<title>Pokédex: Viewer</title>
 
 <nav class="navbar navbar-default" role="navigation">
 	  <div class="container-fluid">
@@ -12,7 +12,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">CS Dating</a>
+	      <a class="navbar-brand" href="#">Pokedex!</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,7 +22,7 @@
 	      </ul>
 	      <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Search for hotties...">
+	          <input type="text" class="form-control" placeholder="Search for pokemon...">
 	        </div>
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form>
@@ -43,5 +43,32 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+
+	<h1><span class="label label-primary">Who's That Pokemon?!</span>  </h1>
+		<div class="row">
+			<div class="col-xs-3">
+				<ul class="thumbnails">
+    				<li class="span4">
+		        		<a class="thumbnail" href="#">
+		            		<img src="http://img.pokemondb.net/artwork/charizard.jpg" alt="My Image" />                
+		        		</a>
+		    		</li>
+				</ul>
+		  	</div>
+		  	<div class="col-xs-6 well">
+				<h5><span class="label label-info">Name</span></h5>
+				Charizard
+				<h5><span class="label label-info">Number</span></h5>
+				006
+				<h5><span class="label label-info">Type</span></h5>
+				Fire/Flying
+				<h5><span class="label label-info">Height</span></h5>
+				5′7″ (1.70m)
+				<h5><span class="label label-info">Weight</span></h5>
+				199.5 lbs (90.5 kg)
+		  	</div>
+		</div>
+
+		<div class="col-xs-3 alert alert-danger">This place is on fire!</div>
 
 {% endblock %}
