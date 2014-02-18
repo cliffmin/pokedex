@@ -50,25 +50,59 @@
 				<ul class="thumbnails">
     				<li class="span4">
 		        		<a class="thumbnail" href="#">
-		            		<img src="http://img.pokemondb.net/artwork/charizard.jpg" alt="My Image" />                
+		        			{% if id %}
+		            		<img src={{ id.picture }} alt="My Image" />  
+		            		{%endif%}  		
 		        		</a>
 		    		</li>
 				</ul>
 		  	</div>
 		  	<div class="col-xs-6 well">
-				<h5><span class="label label-info">Name</span></h5>
-				Charizard
+				<h5><span class="label label-info">Name</span></h5>	
+
+				{% if id %}
+				{{ id.name }}
+				
+				{%else%}
+				No Match
+
+				{%endif%}
 				<h5><span class="label label-info">Number</span></h5>
-				006
+				{% if id %}
+				{{ id.number }}
+				
+				{%else%}
+				No Match
+
+				{%endif%}
 				<h5><span class="label label-info">Type</span></h5>
-				Fire/Flying
+				{% if id %}
+				{{ id.type }}
+				
+				{%else%}
+				No Match
+
+				{%endif%}
 				<h5><span class="label label-info">Height</span></h5>
-				5′7″ (1.70m)
+				{% if id %}
+				{{ id.height }}
+				
+				{%else%}
+				No Match
+
+				{%endif%}
 				<h5><span class="label label-info">Weight</span></h5>
-				199.5 lbs (90.5 kg)
+				{% if id %}
+				{{ id.weight }}
+				
+				{%else%}
+				No Match
+
+				{%endif%}
 		  	</div>
 		</div>
 
+		{% if id.number == '006'%}
 		<div class="col-xs-3 alert alert-danger">This place is on fire!</div>
-
+		{%endif%}
 {% endblock %}
